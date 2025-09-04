@@ -1,0 +1,137 @@
+@import url("../../index.css");
+
+.headerCont {
+  color: var(--text);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  border-bottom: 1px solid var(--border);
+}
+.language {
+  position: relative;
+  display: inline-block;
+}
+.headerLeft {
+  display: flex;
+  gap: 24px;
+}
+.languagesButton {
+  cursor: pointer;
+  width: 155px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 4px 6px 4px 14px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 1%;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.langList {
+  z-index: 100;
+  background-color: white;
+  position: absolute;
+  width: 133px;
+  top: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 4px 6px 4px 14px;
+  gap: 5px;
+}
+.langListRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.langCheck {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.format {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text);
+  letter-spacing: 1%;
+}
+.format input {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.new button {
+  padding: 10px 16px 10px 12px;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #4571e4;
+  border: none;
+  cursor: pointer;
+}
+
+.new button svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 700px) {
+  .headerCont {
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+    align-items: start;
+  }
+  .language {
+    width: 100%;
+  }
+  .headerLeft {
+    display: flex;
+    flex-direction: column;
+  }
+  .new {
+    width: 100%;
+  }
+  .new button {
+    width: 100%;
+  }
+  .headerLeft {
+    width: 100%;
+    gap: auto;
+  }
+  .languagesButton {
+    width: 100%;
+  }
+  .langList {
+    top: 50px;
+    width: 96%;
+  }
+}

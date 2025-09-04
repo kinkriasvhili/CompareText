@@ -1,0 +1,41 @@
+@import url("../../index.css");
+.loadingContainer {
+  width: 280px;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.rightSideCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.barContMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.barContainer {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.loadingTex {
+  font-size: 10px;
+  color: #383a4899;
+}
+.bar {
+  height: 8px;
+  border-radius: 64px;
+  background-color: #4571e4;
+  transition: width 50ms linear;
+}

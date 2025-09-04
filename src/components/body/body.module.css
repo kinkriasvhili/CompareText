@@ -1,0 +1,29 @@
+@import url("../../index.css");
+
+.bodyContainer {
+  margin-left: 240px;
+  width: calc(100% - 388px);
+  padding: 24px 24px;
+  width: 1136px !important;
+  height: 652px !important;
+}
+
+@media (max-width: 1435px) {
+  .bodyContainer {
+    width: 75vw !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bodyContainer {
+    width: 70vw !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .bodyContainer {
+    margin-left: 0px;
+    margin-top: 100px;
+    width: 100% !important;
+  }
+}

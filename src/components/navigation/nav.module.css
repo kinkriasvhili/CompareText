@@ -1,0 +1,170 @@
+@import url("../../index.css");
+.png img {
+  color: red;
+  width: 100px;
+}
+
+.navigation {
+  color: white;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--nav);
+  gap: 28px;
+  min-width: 240px;
+  left: 0;
+}
+
+.chevron {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  width: 20xp;
+  height: 20px;
+  left: 193px;
+  top: 12px;
+}
+.logo {
+  gap: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+.logo img {
+  height: 44px !important;
+  width: 42px !important;
+}
+.row {
+  margin-left: 24px;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  gap: 9px;
+}
+.row img {
+  width: 24px;
+  height: 24px;
+}
+.rowOn {
+  height: 60px;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 30px 0 0 30px; /* normal curve only on left */
+  padding-left: 10px !important;
+  color: var(--nav);
+  margin-left: 14px !important;
+  position: relative;
+}
+
+.rowOn::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  z-index: 1;
+  right: 23px;
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 0;
+  background-color: white;
+}
+.rowOn::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  z-index: 1;
+  right: 24px; /* pushes outward */
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: none;
+  background: var(--nav);
+  border-bottom-right-radius: 50%;
+}
+
+.rowOn p::before {
+  content: "";
+  position: absolute;
+  bottom: -18px; /* instead of top */
+  right: 23px;
+  height: 20px;
+  width: 20px;
+  background: white;
+}
+
+.rowOn p::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* instead of top */
+  right: 24px;
+  height: 20px;
+  width: 20px;
+  background: var(--nav);
+  border-top-right-radius: 50%; /* instead of bottom-right */
+}
+.bottomRow {
+  margin-top: auto;
+  bottom: 0;
+  height: 60px;
+  border-top: 1px solid #9eb9ff33;
+  margin-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.userContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.navBar {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 25px;
+}
+
+@media (max-width: 950px) {
+  .navigation {
+    right: 0;
+    bottom: auto;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navBar {
+    display: flex;
+  }
+  .row {
+    display: none;
+  }
+  .logo {
+    display: flex !important;
+  }
+  .rowOn {
+    position: absolute;
+    margin-top: 60px;
+    display: flex !important;
+  }
+  .rowOn::before,
+  .rowOn::after,
+  .rowOn p::after,
+  .rowOn p::before {
+    content: none !important;
+  }
+  .chevron {
+    display: none;
+  }
+  .logo {
+    margin-top: 0;
+  }
+  .logo img {
+    height: 44px !important;
+    width: 42px !important;
+  }
+}

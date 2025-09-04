@@ -1,0 +1,37 @@
+:root {
+  --green: #3ebc5e;
+  --orange: #ff9500;
+  --mint: #00c7be;
+  --yellow: #ffcc00;
+  --blue: #007aff;
+  --indigo: #5856d6;
+  --purple: #af52de;
+  --pink: #ff2d55;
+  --brown: #a2845e;
+  --darkRed: #b50022;
+  --nav: #132450;
+  --text: #383a48;
+  --border: #e0e0e0;
+}
+
+body {
+  font-family: Helvetica;
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnOff {
+  cursor: default !important;
+  background-color: #383a48 !important;
+}
