@@ -131,6 +131,7 @@
 
 @media (max-width: 950px) {
   .navigation {
+    z-index: 105;
     right: 0;
     bottom: auto;
     height: 60px;
@@ -147,6 +148,8 @@
     display: flex !important;
   }
   .rowOn {
+    border-radius: 0;
+    width: 100%;
     position: absolute;
     margin-top: 60px;
     display: flex !important;
