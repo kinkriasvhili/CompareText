@@ -1,6 +1,7 @@
 import styles from "./text.module.css";
-
+import { useLanguage } from "../../LanguageContext";
 export default function TextArea({ ref, parts, setDisabled }) {
+  const { lang } = useLanguage();
   const handleInput = (e) => {
     const text = e.currentTarget.innerText.trim();
     if (text !== "") {
@@ -21,7 +22,9 @@ export default function TextArea({ ref, parts, setDisabled }) {
   return (
     <div
       ref={ref}
-      className={styles.textareaLike}
+      className={`${styles.textareaLike} ${
+        lang == "ge" ? styles.areaG : styles.areaE
+      }`}
       contentEditable
       onKeyDown={handleKeyDown}
       suppressContentEditableWarning

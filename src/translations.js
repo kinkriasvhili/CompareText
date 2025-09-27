@@ -1,0 +1,26 @@
+export const translations = {
+  ge: {
+    compt: "ტექსტის შედარება",
+    language: "ენა",
+    format: "ფორმატის შენარჩუნება",
+    opNew: "ახლის გახსნა",
+    compare: "შედარება",
+    spelling: "მართლწერა",
+    voice: "ხმა",
+    text: "ტქესტი",
+    convert: "კონვერტაცია",
+    fullName: "თამარ ონიანი",
+  },
+  en: {
+    compt: "Compare text",
+    language: "Language",
+    format: "Maintain the format",
+    opNew: "Open New",
+    compare: "Compare",
+    spelling: "Spelling",
+    voice: "Voice",
+    text: "Text",
+    convert: "Conversion",
+    fullName: "Tamar Oniani",
+  },
+};

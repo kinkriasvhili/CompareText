@@ -1,18 +1,12 @@
-import { useState } from "react";
 import styles from "./nav.module.css";
 import chevronsLeft from "../../../public/images/chevrons-left.png";
-import logo from "../../../public/images/logo.png";
 import logo1 from "../../../public/images/logo1.png";
-
-import check from "../../../public/images/check.png";
-import mic from "../../../public/images/mic.png";
-import alignCenter from "../../../public/images/align-center.png";
-import pdf from "../../../public/images/programming-code-document.png";
-import arrowRight from "../../../public/images/arrow-right.png";
 import user from "../../../public/images/User-images.png";
-import dots from "../../../public/images/dots-menu.png";
+import { useLanguage } from "../../LanguageContext";
+import { translations } from "../../translations";
 
 export default function Navigation() {
+  const { lang } = useLanguage();
   return (
     <div className={styles.navigation}>
       <div className={styles.chevron}>
@@ -43,7 +37,7 @@ export default function Navigation() {
           />
         </svg>
 
-        <p>მართლმწერა</p>
+        <p>{translations[lang].spelling}</p>
       </div>
       <div className={`${styles.row} ${styles.rowOn}`}>
         <svg
@@ -103,7 +97,7 @@ export default function Navigation() {
             stroke-linejoin="round"
           />
         </svg>
-        <p>ტესტის შედარება</p>
+        <p>{translations[lang].compt}</p>
       </div>
       <div className={`${styles.row} ${styles.thirdRow}`}>
         <svg
@@ -142,7 +136,7 @@ export default function Navigation() {
             stroke-linejoin="round"
           />
         </svg>
-        <p>ხმა</p>
+        <p>{translations[lang].voice}</p>
         <svg
           width="16"
           height="16"
@@ -164,7 +158,7 @@ export default function Navigation() {
           />
         </svg>
 
-        <p>ტექსტი</p>
+        <p>{translations[lang].text}</p>
       </div>
       <div className={styles.row}>
         <svg
@@ -211,7 +205,7 @@ export default function Navigation() {
           />
         </svg>
 
-        <p>ტექსტი</p>
+        <p>{translations[lang].text}</p>
         <svg
           width="16"
           height="16"
@@ -233,7 +227,7 @@ export default function Navigation() {
           />
         </svg>
 
-        <p>ხმა</p>
+        <p>{translations[lang].voice}</p>
       </div>
       <div className={styles.row}>
         <svg
@@ -273,12 +267,12 @@ export default function Navigation() {
           />
         </svg>
 
-        <p>PDF კონვერტაცია</p>
+        <p>PDF {translations[lang].convert}</p>
       </div>
       <div className={`${styles.row} ${styles.bottomRow}`}>
         <div className={styles.userContainer}>
           <img src={user} alt="" />
-          <span>თამარ ონიანი</span>
+          <span>{translations[lang].fullName}</span>
         </div>
 
         <svg

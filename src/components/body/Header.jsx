@@ -1,7 +1,13 @@
 import { useState } from "react";
 import styles from "./header.module.css";
+import { useLanguage } from "../../LanguageContext";
+import { translations } from "../../translations";
 export default function Header({ isLoading }) {
+  const { lang, toggleLang } = useLanguage();
   const [languages, setLanguages] = useState(false);
+  const changLang = (lang) => {
+    toggleLang(lang);
+  };
   return (
     <div className={styles.headerCont}>
       <div className={styles.headerLeft}>
@@ -12,7 +18,7 @@ export default function Header({ isLoading }) {
             }}
             className={styles.languagesButton}
           >
-            ქართული{" "}
+            {translations[lang].language}{" "}
             <svg
               className={`${styles.chevron} ${languages ? styles.rotate : ""}`}
               width="10"
@@ -30,19 +36,29 @@ export default function Header({ isLoading }) {
           {languages && (
             <div className={styles.langList}>
               <div className={styles.langListRow}>
-                <input className={styles.langCheck} type="checkbox" />
-                <span>ქართული</span>
+                <input
+                  checked={lang == "ge"}
+                  className={styles.langCheck}
+                  type="checkbox"
+                  onChange={() => changLang("ge")}
+                />
+                <span>ქართული (GE)</span>
               </div>
               <div className={styles.langListRow}>
-                <input className={styles.langCheck} type="checkbox" />
-                <span>ქართული</span>
+                <input
+                  checked={lang == "en"}
+                  className={styles.langCheck}
+                  type="checkbox"
+                  onChange={() => changLang("en")}
+                />
+                <span>English (EN)</span>
               </div>
             </div>
           )}
         </div>
         <div className={styles.format}>
           <input type="checkbox" />
-          <span>ფორმატის შენარჩუნება</span>
+          <span>{translations[lang].format}</span>
         </div>
       </div>
       <div className={styles.new}>
@@ -78,7 +94,7 @@ export default function Header({ isLoading }) {
               stroke-linejoin="round"
             />
           </svg>
-          ახლის გახსნა
+          {translations[lang].opNew}
         </button>
       </div>
     </div>

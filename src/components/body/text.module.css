@@ -9,8 +9,13 @@
   height: 432px;
 }
 
-.textareaLike:empty::before {
+.areaG:empty::before {
   content: "დაიწყე წერა...";
+  color: #aaa;
+  pointer-events: none;
+}
+.areaE:empty::before {
+  content: "Start writing...";
   color: #aaa;
   pointer-events: none;
 }

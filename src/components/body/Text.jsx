@@ -3,8 +3,11 @@ import { useState, useRef } from "react";
 import { diffWordsWithSpace } from "diff";
 import TextArea from "./TextArea";
 import Loading from "./Loading.jsx";
+import { useLanguage } from "../../LanguageContext";
+import { translations } from "../../translations";
 export default function Text({ isLoading, setIsLoading }) {
   const [parts, setParts] = useState(null);
+  const { lang } = useLanguage();
 
   const [disabled, setDisabled] = useState(true);
   const [disabled1, setDisabled1] = useState(true);
@@ -87,7 +90,7 @@ export default function Text({ isLoading, setIsLoading }) {
             setIsLoading(true);
           }}
         >
-          შედარება
+          {translations[lang].compare}
         </button>
       </div>
     </div>
